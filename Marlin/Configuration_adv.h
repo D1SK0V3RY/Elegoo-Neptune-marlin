@@ -1306,7 +1306,7 @@
   #if AXIS_DRIVER_TYPE_Z(TMC2208) || AXIS_DRIVER_TYPE_Z(TMC2208_STANDALONE)
     #define FTM_DIR_CHANGE_HOLD_Z
   #endif
-  #if 1 || HAS_E_DRIVER(TMC2208) || HAS_E_DRIVER(TMC2208_STANDALONE)
+  #if HAS_E_DRIVER(TMC2208) || HAS_E_DRIVER(TMC2208_STANDALONE)
     #define FTM_DIR_CHANGE_HOLD_E
   #endif
 
@@ -4948,3 +4948,26 @@
 
 // Shrink the build for smaller boards by sacrificing some serial feedback
 //#define MARLIN_SMALL_BUILD
+
+// @section mods
+
+#define ENABLE_DUMMY_SERIAL  // Enable dummy serial for LCD needs on Neptune 3 boards. Leave enabled.
+
+#define N3P_WIFI // Enable support for WiFi module on Neptune 3 board (ESP8266 based).
+#if ENABLED(N3P_WIFI)
+  #define SERIAL_PORT_2 2
+  #define BAUDRATE_2 115200
+#endif
+
+#define MKS_WIFI_MODULE // WIP
+
+#define EXTRUDER_DRIVER_MOD // Neptune 3 extruder modification.
+//This setting will switch the driver from E0 to E1, allowing you to install a custom driver.
+//Enable only if you know what are you doing and define driver properly.
+//Don’t forget to connect the extruder wire to E1 instead of E0 and check the rotation direction.
+#if ENABLED(EXTRUDER_DRIVER_MOD)
+  #undef E0_DRIVER_TYPE
+  #define E0_DRIVER_TYPE TMC2209_STANDALONE
+  #undef INVERT_E0_DIR
+  #define INVERT_E0_DIR true
+#endif

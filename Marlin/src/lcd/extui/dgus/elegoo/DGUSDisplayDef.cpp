@@ -4073,9 +4073,9 @@
           else if(advaned_set==2) //最大加速度
           {
             planner.settings.max_acceleration_mm_per_s2[X_AXIS] = (planner.settings.max_acceleration_mm_per_s2[X_AXIS] + (unit*10));
-            if(planner.settings.max_acceleration_mm_per_s2[X_AXIS]>3000)
+            if(planner.settings.max_acceleration_mm_per_s2[X_AXIS]>5000)
             {
-              planner.settings.max_acceleration_mm_per_s2[X_AXIS] = 3000;
+              planner.settings.max_acceleration_mm_per_s2[X_AXIS] = 5000;
             }
             planner.set_max_acceleration(X_AXIS, planner.settings.max_acceleration_mm_per_s2[X_AXIS]);         
           }
@@ -4094,9 +4094,9 @@
           else if(advaned_set==2) //最大加速度
           {
             planner.settings.max_acceleration_mm_per_s2[Y_AXIS] = (planner.settings.max_acceleration_mm_per_s2[Y_AXIS] + (unit*10));
-            if(planner.settings.max_acceleration_mm_per_s2[Y_AXIS]>3000)
+            if(planner.settings.max_acceleration_mm_per_s2[Y_AXIS]>5000)
             {
-              planner.settings.max_acceleration_mm_per_s2[Y_AXIS] = 3000;
+              planner.settings.max_acceleration_mm_per_s2[Y_AXIS] = 5000;
             }
             planner.set_max_acceleration(Y_AXIS, planner.settings.max_acceleration_mm_per_s2[Y_AXIS]);            
           }
@@ -4106,18 +4106,18 @@
           if(advaned_set==1) //最大速度
           {
             planner.settings.max_feedrate_mm_s[Z_AXIS] = (planner.settings.max_feedrate_mm_s[Z_AXIS] + unit);
-            if(planner.settings.max_feedrate_mm_s[Z_AXIS]>15)
+            if(planner.settings.max_feedrate_mm_s[Z_AXIS]>30)
             {
-              planner.settings.max_feedrate_mm_s[Z_AXIS] = 15;
+              planner.settings.max_feedrate_mm_s[Z_AXIS] = 30;
             }
             planner.set_max_feedrate(Z_AXIS, planner.settings.max_feedrate_mm_s[Z_AXIS]);
           }
           else if(advaned_set==2) //最大加速度
           {
             planner.settings.max_acceleration_mm_per_s2[Z_AXIS] = (planner.settings.max_acceleration_mm_per_s2[Z_AXIS] + (unit*10));
-            if(planner.settings.max_acceleration_mm_per_s2[Z_AXIS]>150)
+            if(planner.settings.max_acceleration_mm_per_s2[Z_AXIS]>200)
             {
-              planner.settings.max_acceleration_mm_per_s2[Z_AXIS] = 150;
+              planner.settings.max_acceleration_mm_per_s2[Z_AXIS] = 200;
             }
             planner.set_max_acceleration(Z_AXIS, planner.settings.max_acceleration_mm_per_s2[Z_AXIS]);             
           }
@@ -4127,18 +4127,18 @@
           if(advaned_set==1) //最大速度
           {
             planner.settings.max_feedrate_mm_s[E_AXIS_N(0)] = (planner.settings.max_feedrate_mm_s[E_AXIS_N(0)] + unit);
-            if(planner.settings.max_feedrate_mm_s[E_AXIS_N(0)]>25)
+            if(planner.settings.max_feedrate_mm_s[E_AXIS_N(0)]>45)
             {
-              planner.settings.max_feedrate_mm_s[E_AXIS_N(0)] = 25;
+              planner.settings.max_feedrate_mm_s[E_AXIS_N(0)] = 45;
             }
             planner.set_max_feedrate(E_AXIS_N(0), planner.settings.max_feedrate_mm_s[E_AXIS_N(0)]);
           }
           else if(advaned_set==2) //最大加速度
           {
             planner.settings.max_acceleration_mm_per_s2[E_AXIS_N(0)] = (planner.settings.max_acceleration_mm_per_s2[E_AXIS_N(0)] + (unit*10));
-            if(planner.settings.max_acceleration_mm_per_s2[E_AXIS_N(0)]>2000)
+            if(planner.settings.max_acceleration_mm_per_s2[E_AXIS_N(0)]>3000)
             {
-              planner.settings.max_acceleration_mm_per_s2[E_AXIS_N(0)] = 2000;
+              planner.settings.max_acceleration_mm_per_s2[E_AXIS_N(0)] = 3000;
             }
             planner.set_max_acceleration(E_AXIS_N(0), planner.settings.max_acceleration_mm_per_s2[E_AXIS_N(0)]);              
           }
