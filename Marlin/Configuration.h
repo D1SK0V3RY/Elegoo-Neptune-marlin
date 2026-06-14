@@ -3921,3 +3921,27 @@
 
 // Disable servo with M282 to reduce power consumption, noise, and heat when not in use
 //#define SERVO_DETACH_GCODE
+
+// @section mods
+
+#define ENABLE_DUMMY_SERIAL  // Enable dummy serial for LCD needs on Neptune 3 boards. Leave enabled.
+
+#define N3P_WIFI // Enable support for WiFi module on Neptune 3 board (ESP8266 based).
+#if ENABLED(N3P_WIFI)
+  #define SERIAL_PORT_2 2
+  #define BAUDRATE_2 115200
+#endif
+
+//#define MKS_WIFI_MODULE // WIP, does not work yet. Use N3P_WIFI instead.
+
+//#define EXTRUDER_DRIVER_MOD // Neptune 3 extruder modification.
+//This setting will switch the driver from E0 to E1, allowing you to install a custom driver.
+//Don’t forget to connect the extruder wire to E1 instead of E0 and check the rotation direction.
+//Enable only if you know what are you doing.
+#if ENABLED(EXTRUDER_DRIVER_MOD)
+  #undef E0_DRIVER_TYPE
+  #define E0_DRIVER_TYPE TMC2209_STANDALONE
+  #undef FTM_DIR_CHANGE_HOLD_E
+  #undef INVERT_E0_DIR
+  #define INVERT_E0_DIR true
+#endif
