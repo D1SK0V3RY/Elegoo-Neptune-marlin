@@ -62,10 +62,6 @@
 #define Z_STEP_PIN                          PC7
 #define Z_DIR_PIN                           PC9
 
-//#define E0_ENABLE_PIN                       PC6
-//#define E0_STEP_PIN                         PB10
-//#define E0_DIR_PIN                          PB1
-
 #if ENABLED(EXTRUDER_DRIVER_MOD) // Neptune 3 extruder modification.
   #define E0_ENABLE_PIN                       PC5
   #define E0_STEP_PIN                         PC4
@@ -92,7 +88,6 @@
   #define WIFI_IO1_PIN                      PC15
   #define WIFI_RESET_PIN                    PA1
 #endif
-
 
 //
 // Auto fans

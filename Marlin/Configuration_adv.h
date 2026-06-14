@@ -4959,9 +4959,9 @@
   #define BAUDRATE_2 115200
 #endif
 
-#define MKS_WIFI_MODULE // WIP
+//#define MKS_WIFI_MODULE // WIP, does not work yet. Use N3P_WIFI instead.
 
-#define EXTRUDER_DRIVER_MOD // Neptune 3 extruder modification.
+//#define EXTRUDER_DRIVER_MOD // Neptune 3 extruder modification.
 //This setting will switch the driver from E0 to E1, allowing you to install a custom driver.
 //Enable only if you know what are you doing and define driver properly.
 //Don’t forget to connect the extruder wire to E1 instead of E0 and check the rotation direction.
